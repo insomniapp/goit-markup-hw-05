@@ -576,9 +576,11 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-form-icon{
     position: absolute;
-    top: 8px;
+    top: 50%;
     left: 16px;
+    transform: translateY(-50%);
     fill: #2E2F42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-form{
     width: 100%;
@@ -586,7 +588,9 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.40);
     padding-left: 38px;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: transparent;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-form:focus,
 .input-form-comments:focus{
@@ -601,10 +605,17 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     width: 360px;
     height: 120px;
     border-radius: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em; 
+    color: rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    outline: transparent;
     border: 1px solid rgba(46, 47, 66, 0.40);
     resize: none;
     padding: 8px 16px;
     display: block;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .input-form-comments::placeholder{
     font-family: Roboto;
@@ -614,9 +625,11 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     letter-spacing: 0.48px;
     color: rgba(46, 47, 66, 0.40);
 }
-
+.review-form-comments{
+    margin-bottom: 16px;
 .review-form-chekbox-block{
-    margin-top: 16px;
+    margin-bottom: 24px;
+    
 }
 .review-form-new-checkbox{
     width: 16px;
@@ -628,6 +641,8 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .review-form-new-checkbox-icon{
     fill:#FCFCFC;
@@ -663,6 +678,7 @@ text-align: center;
 min-width: 169px;
 height: 56px;
 padding: 16px 32px;
+border: none;
 border-radius: 4px;
 background-color: #4D5AE5;
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
