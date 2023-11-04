@@ -492,10 +492,7 @@ main{
     flex-grow: 1;
 }
 /* backdrop */
-form{
-    margin: 0;
-}
-.backdrop{
+.backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -506,7 +503,10 @@ form{
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+form{
+    margin: 0;
 }
 .modal-backdrop.is-open{
     opacity: 1;
